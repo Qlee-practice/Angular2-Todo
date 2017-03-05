@@ -1,0 +1,11 @@
+<div class="todo-list">
+    <h1>Todos</h1>
+    <input #todo type="text" (keyup.enter)="create(todo)">
+
+    <ul class="todo-items">
+        <todo-item *ngFor="let todo of list" [todo]="todo"></todo-item>
+        <div class="todo-items-place-holder" *ngIf="list.length == 0">
+            No Todo
+        </div>
+    </ul>
+</div>
